@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { JSX } from 'react';
 import Image from 'next/image';
 import '@/app/styles/HeaderBar.css';
 import logo from '@/app/logos/logo-siete-estrellas.png';

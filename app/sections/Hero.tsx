@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { JSX } from 'react';
 import '@/app/styles/Hero.css';
 
 export default function Hero(): JSX.Element {
