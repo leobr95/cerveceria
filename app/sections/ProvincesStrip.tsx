@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { JSX } from 'react';
 import '@/app/styles/ProvincesStrip.css';
 
 const PROVINCES = ['Vélez','Comunera','Guanentá','García Rovira','Mares','Soto','Yariguíes'];

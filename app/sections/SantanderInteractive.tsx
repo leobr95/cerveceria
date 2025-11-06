@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { JSX } from 'react';
 import '@/app/styles/SantanderInteractive.css';
 
 type Topic = { id: string; title: string; blurb: string; image: string };
