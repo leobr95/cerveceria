@@ -46,7 +46,7 @@ export default function BrewerySimulator(): JSX.Element {
     };
     save(recipe);
     // feedback simple
-    // eslint-disable-next-line no-alert
+     
     alert('Receta guardada en tu navegador (localStorage).');
   };
 

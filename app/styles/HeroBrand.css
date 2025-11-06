@@ -28,7 +28,7 @@
 .heroB-title span{
   background: linear-gradient(135deg, #D4AF37 0%, #F1C76B 100%);
   -webkit-background-clip: text; background-clip:text;
-  -webkit-text-fill-color: transparent; text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; text-emphasis-color: transparent;
 }
 .heroB-sub{ margin: 0 0 10px; color:#C7CAD6; font-size: clamp(16px, 1.8vw, 18px) }
 .heroB-cta{ display:flex; gap:10px; flex-wrap: wrap; }

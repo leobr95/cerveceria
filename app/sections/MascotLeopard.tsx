@@ -230,7 +230,7 @@ export default function MascotLeopard({
         {/* ===== MANCHAS DEL CUERPO ===== */}
         ${[ // pares [x,y], mini patrones
           [24,28],[30,30],[36,28],[42,30],[48,28],[22,36],[28,38],[34,36],[40,38],[46,36]
-        ].map(([x,y],i)=>`<rect x="${x}" y="${y}" width="3" height="3" class="spot" />`).join('')}
+        ].map(([x,y])=>`<rect x="${x}" y="${y}" width="3" height="3" class="spot" />`).join('')}
         ${[[54,34],[50,40],[38,42],[26,44]].map(([x,y])=>`<rect x="${x}" y="${y}" width="3" height="3" class="spot" />`).join('')}
 
         {/* ===== PATAS (animadas) ===== */}

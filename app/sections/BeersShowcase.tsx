@@ -1,5 +1,6 @@
 'use client';
 import React, { JSX } from 'react';
+import Image from 'next/image';
 import '@/app/styles/BeersShowcase.css';
 
 type Beer = {
@@ -49,7 +50,7 @@ export default function BeersShowcase(): JSX.Element {
           <li key={b.name} className="beer-card">
             <div className="beer-bottle">
               {/* img normal para evitar configurar dominios; si prefieres next/image, ver nota abajo */}
-              <img
+              <Image
                 src={b.img}
                 alt={`${b.name} - ${b.style}`}
                 loading="lazy"
