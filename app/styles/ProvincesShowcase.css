@@ -1,0 +1,28 @@
+.prov { max-width: 1080px; padding: 32px 16px; margin: 0 auto; }
+.prov-head h2 { font-size: clamp(22px, 3.2vw, 32px); font-weight: 800; margin: 0 0 6px; }
+.prov-head p { color: #4b5563; margin: 0 0 14px; }
+
+.prov-grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(7, minmax(120px, 1fr));
+}
+@media (max-width: 1100px){ .prov-grid{ grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px){ .prov-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+.prov-card {
+  aspect-ratio: 6/5; border-radius: 18px; color: #fff; font-weight: 800;
+  display: grid; place-items: start; padding: 12px; position: relative; overflow: hidden;
+  background: linear-gradient(180deg, #065f46, #064e3b);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.12);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.prov-card:hover{ transform: translateY(-2px); filter: saturate(1.05) }
+.prov-card.is-active{ outline: 2px solid #ffd166; box-shadow: 0 16px 30px rgba(0,0,0,.22) }
+
+.prov-name { font-size: 1rem; letter-spacing: .3px; }
+
+.prov-active {
+  margin-top: 12px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px;
+}
+.prov-active h3 { margin: 0 0 6px; font-weight: 700; }
+.prov-active p { margin: 0; color: #4b5563; }

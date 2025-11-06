@@ -1,0 +1,146 @@
+:root{
+  --base:#0B0B10;         /* fondo general más oscuro */
+  --surface:#0A0B0E;      /* tarjetas oscuras */
+  --text:#ECEEF4;         /* texto claro */
+  --muted:#B9BFCA;
+
+  --brand:#D4AF37;        /* dorado */
+  --brand-2:#F1C76B;      /* dorado suave */
+  --success:#22C55E;
+
+  --radius:22px;
+  --shadow-out-1: 10px 10px 24px rgba(0,0,0,.45);
+  --shadow-out-2: -6px -6px 16px rgba(255,255,255,.02);
+  --shadow-in-1: inset 8px 8px 16px rgba(0,0,0,.45);
+  --shadow-in-2: inset -8px -8px 16px rgba(255,255,255,.04);
+
+  --neo-grad: linear-gradient(135deg, #D4AF37 0%, #F1C76B 100%);
+  --neo-grad-soft: linear-gradient(135deg, rgba(212,175,55,.15) 0%, rgba(241,199,107,.14) 100%);
+  --halo: 0 0 0 10px rgba(212,175,55,.06), 0 24px 40px rgba(0,0,0,.32);
+}
+
+
+/* ========= BASE ========= */
+html, body{
+  margin:0;
+  padding:0;
+  background: var(--base);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+a{
+  color: var(--brand);
+  text-decoration: none;
+}
+
+img, picture, video, canvas, svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* contenedor genérico */
+.container{
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* utilidades simples que no chocan con secciones */
+.bg-base { background: var(--base); }
+.text-slate-900 { color: var(--text); }
+
+/* accesibilidad: reduce motion global */
+@media (prefers-reduced-motion: reduce){
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========= NAV (genérico, sin estilos de secciones) ========= */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 18px;
+  margin:12px auto 18px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-out-1), var(--shadow-out-2);
+}
+
+.links{ display:flex; gap:14px; align-items:center; }
+
+.toggle{
+  padding:10px 14px;
+  border-radius:16px;
+  border:0;
+  cursor:pointer;
+  background: var(--surface);
+  box-shadow: var(--shadow-out-1), var(--shadow-out-2);
+}
+
+/* ========= Botón primario reusable ========= */
+.btn-primary{
+  background: var(--neo-grad);
+  color:#fff;
+  border:0;
+  cursor:pointer;
+  padding:12px 18px;
+  border-radius:14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* ========= FAB WhatsApp (opcional global) ========= */
+.whatsapp-fab{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:#fff;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  box-shadow:0 8px 32px rgba(0,0,0,.25);
+  z-index: 50; /* por encima de secciones, por debajo de mascota (9999) */
+}
+
+/* ========= FOOTER ========= */
+.footer{
+  margin:32px 0 10px;
+  padding:16px 0;
+  border-top:1px solid #ffffff40;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* ========= RESPONSIVE GLOBAL ========= */
+@media (max-width: 720px){
+  .container{ padding: 16px; }
+  .nav{ padding: 12px 14px; }
+  .links{ gap: 10px; }
+}
+
+@media (max-width: 480px){
+  .nav{ margin:10px auto 14px; }
+}
+
+/* ========= Apoyo a la mascota detrás de secciones ========= */
+/* Mantén estas capas para que la mascota (z-index: 9999 normal / 0 en behind)
+   pueda “meterse” detrás cuando baje su z-index. */
+.brew-card,
+.prov-card,
+.rlib-card,
+section{
+  position: relative;
+  z-index: 2;
+}

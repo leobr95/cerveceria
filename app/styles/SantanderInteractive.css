@@ -1,0 +1,40 @@
+.sant{ max-width:1160px; margin: 10px auto 16px; padding: 16px; background:#0A0B0E; border:1px solid rgba(255,215,128,.10); border-radius: 18px; }
+.sant-head h2{ margin:0 0 4px; color:#EEE; font-size: clamp(20px,2.6vw,26px) }
+.sant-head p{ margin:0 0 8px; color:#B9BFCA }
+
+.sant-grid{
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px;
+}
+.sant-hero{
+  position: relative; min-height: 340px; border-radius: 16px; overflow:hidden;
+  border: 1px solid rgba(255,215,128,.12);
+}
+.sant-photo{
+  position:absolute; inset:0; background-size: cover; background-position: center;
+  transform: scale(1.02); transition: transform .6s ease;
+}
+.sant-hero:hover .sant-photo{ transform: scale(1.06) }
+.sant-caption{
+  position: absolute; left: 12px; bottom: 12px; right: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 60%);
+  color:#EEE; padding: 40px 10px 10px; border-radius: 12px;
+}
+.sant-caption strong{ color: #F1C76B; font-size: 1.05rem }
+.sant-caption span{ display:block; color:#D9DCE6 }
+
+.sant-list{ display: grid; gap: 10px; align-content: start; }
+.sant-item{
+  display:flex; gap:10px; padding: 10px; border-radius: 12px; cursor:pointer; text-align:left;
+  background:#0D0F14; border:1px solid rgba(255,215,128,.10);
+  color:#E9EBF3; transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.sant-item:hover{ transform: translateY(-1px); background:#0F1218; }
+.sant-item.is-active{ border-color: rgba(241,199,107,.65); box-shadow: 0 10px 26px rgba(241,199,107,.10); }
+.sant-dot{ color:#F1C76B; filter: drop-shadow(0 0 8px rgba(241,199,107,.45)); }
+.sant-text strong{ display:block }
+.sant-text span{ color:#BFC6D4; font-size:.95rem }
+
+@media (max-width: 960px){
+  .sant-grid{ grid-template-columns: 1fr; }
+  .sant-hero{ min-height: 260px; }
+}

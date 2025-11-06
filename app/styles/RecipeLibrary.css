@@ -1,0 +1,75 @@
+.rlib {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+.rlib-head h2{
+  font-size: clamp(22px, 3.2vw, 32px);
+  font-weight: 800;
+  margin:0 0 6px;
+  color: var(--text);
+}
+.rlib-head p{ color: var(--muted); margin:0 0 12px }
+.rlib-empty{ color: var(--muted) }
+
+/* Grid de tarjetas */
+.rlib-grid{
+  display:grid;
+  gap:12px;
+  grid-template-columns: repeat(3, 1fr);
+  list-style:none;
+  padding:0;
+}
+@media (max-width: 1100px){ .rlib-grid{ grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 700px){ .rlib-grid{ grid-template-columns: 1fr } }
+
+/* Tarjeta oscura con borde dorado sutil */
+.rlib-card{
+  border:1px solid rgba(241,199,107,.14);
+  border-radius:14px;
+  padding:12px;
+  background: var(--surface);
+  box-shadow: 0 10px 26px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.04);
+}
+.rlib-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px }
+.rlib-name{ font-weight:800; font-size:1.05rem; color: var(--text); }
+.rlib-sub{ font-size:.85rem; color: var(--muted) }
+
+/* Botón eliminar: rojo discreto sobre fondo oscuro */
+.rlib-del{
+  border-radius:999px;
+  border:1px solid rgba(239,68,68,.6);
+  color:#fecaca; /* rojo claro sobre oscuro */
+  background:#1a0e0e;
+  padding:6px 10px;
+  cursor:pointer;
+  transition: filter .15s ease, transform .1s ease;
+}
+.rlib-del:hover{ filter: brightness(1.06); transform: translateY(-1px); }
+
+.rlib-body{ margin-top:8px; display:grid; gap:4px; font-size:.95rem; color: var(--text); }
+
+/* Métricas */
+.rlib-metrics{
+  margin-top:8px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+.rlib-metric{
+  text-align:center;
+  background:#111318;
+  border:1px solid rgba(241,199,107,.18);
+  border-radius:12px;
+  padding:8px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+.rlib-metric .k{
+  font-size:.7rem;
+  color: var(--brand-2);
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+.rlib-metric .v{ font-weight:800; color: var(--text); }
+
+.rlib-foot{ margin-top:8px; color: var(--muted); font-size:.9rem }
